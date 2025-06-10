@@ -1,0 +1,11 @@
+{
+  "name": "sermon-companion",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "echo 'No build system available'",
+    "test": "echo 'No tests specified'"
+  },
+  "dependencies": {
+    "@ionic/core": "^7.4.0"
+  }
+}
