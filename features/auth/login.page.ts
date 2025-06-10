@@ -21,7 +21,10 @@ export class LoginPage {
 
   async login() {
     try {
-      await this.auth.login(this.email, this.password);
+      const resp = await this.auth.login(this.email, this.password);
+      try {
+        localStorage.setItem('auth_user', JSON.stringify(resp.user));
+      } catch {}
       this.error = '';
       this.loggedIn.emit();
     } catch {

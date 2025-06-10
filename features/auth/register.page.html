@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form (ngSubmit)="register()" #form="ngForm">
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input type="email" name="email" required [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" name="password" required [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit" [disabled]="form.invalid">Register</ion-button>
+  </form>
+  <div class="error" *ngIf="error">{{ error }}</div>
+</ion-content>
