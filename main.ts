@@ -1,6 +1,12 @@
-import "./features/home/home.page";
-import "./features/sermon/editor/sermon-editor.page";
-import "./features/community/community-feed.page";
+import { enableProdMode } from '@angular/core';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app.config';
 import { AppComponent } from './app.component';
+import { environment } from './environments/environment';
 
-customElements.define('app-root', AppComponent);
+if (environment.production) {
+  enableProdMode();
+}
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch(err => console.error(err));
