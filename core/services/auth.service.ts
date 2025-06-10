@@ -7,6 +7,7 @@ export interface AuthResponse {
 
 export class AuthService {
   private tokenKey = 'auth_token';
+  private userKey = 'auth_user';
 
   /**
    * Attempt to log in with the provided credentials.
@@ -23,6 +24,9 @@ export class AuthService {
     }
     const data: AuthResponse = await resp.json();
     localStorage.setItem(this.tokenKey, data.token);
+    try {
+      localStorage.setItem(this.userKey, JSON.stringify(data.user));
+    } catch {}
     return data;
   }
 
@@ -40,17 +44,33 @@ export class AuthService {
     }
     const data: AuthResponse = await resp.json();
     localStorage.setItem(this.tokenKey, data.token);
+    try {
+      localStorage.setItem(this.userKey, JSON.stringify(data.user));
+    } catch {}
     return data;
   }
 
   /** Remove saved auth token. */
   logout() {
     localStorage.removeItem(this.tokenKey);
+    localStorage.removeItem(this.userKey);
   }
 
   /** Return the saved auth token if present. */
   get token(): string | null {
     return localStorage.getItem(this.tokenKey);
+  }
+
+  get user(): { id: string; email: string } | null {
+    const data = localStorage.getItem(this.userKey);
+    if (!data) {
+      return null;
+    }
+    try {
+      return JSON.parse(data) as { id: string; email: string };
+    } catch {
+      return null;
+    }
   }
 
   /** Whether a valid auth token is stored. */
