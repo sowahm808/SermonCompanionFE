@@ -36,11 +36,14 @@ This repository contains the frontend portion of the **Sermon Companion** applic
 
 ## Development
 
-The project is in early stages. To get started:
+The project is in early stages and does not ship with the full Angular build
+tooling. To experiment with the prototype:
 
-1. Ensure you have Node.js (v18+) and the Ionic CLI installed.
-2. Clone the repository and run `npm install`.
-3. Use `ionic serve` during development.
+1. Ensure you have Node.js (v18+) installed.
+2. Clone the repository (installing dependencies is optional since no build
+   step is provided).
+3. Open `index.html` in a browser or integrate the sources into an Angular
+   workspace if you wish to use `ionic serve`.
 4. Refer to **TODO.md** for upcoming tasks aimed at making the app production ready.
 
 
