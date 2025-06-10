@@ -1,5 +1,5 @@
-import { RegisterPage } from '../features/auth/register.page';
-import { AuthService } from '../core/services/auth.service';
+import { RegisterPage } from '../src/app/features/auth/register.page';
+import { AuthService } from '../src/app/core/services/auth.service';
 
 describe('RegisterPage', () => {
   let auth: jest.Mocked<AuthService>;

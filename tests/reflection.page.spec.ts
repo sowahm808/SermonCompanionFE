@@ -1,5 +1,5 @@
-import { ReflectionPage, Reflection } from '../features/reflection/reflection.page';
-import { StorageService } from '../core/services/storage.service';
+import { ReflectionPage, Reflection } from '../src/app/features/reflection/reflection.page';
+import { StorageService } from '../src/app/core/services/storage.service';
 
 describe('ReflectionPage', () => {
   let storage: jest.Mocked<StorageService>;

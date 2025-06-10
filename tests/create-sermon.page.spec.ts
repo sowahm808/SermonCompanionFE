@@ -1,6 +1,6 @@
-import { CreateSermonPage } from '../features/sermon/create/create-sermon.page';
-import { SermonAIService } from '../core/services/sermon-ai.service';
-import { StorageService } from '../core/services/storage.service';
+import { CreateSermonPage } from '../src/app/features/sermon/create/create-sermon.page';
+import { SermonAIService } from '../src/app/core/services/sermon-ai.service';
+import { StorageService } from '../src/app/core/services/storage.service';
 
 // Simple jest-based unit test covering the main flow of UC-SERMON-001
 
