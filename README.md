@@ -11,14 +11,14 @@ This repository contains a lightweight prototype of the **Sermon Companion** app
 - **Community Sharing** – View and share sermons with other users.
 - **Local Saving** – Edited sermons are stored in your browser's local storage.
 
-The project does not include a full Angular build system due to environment limitations, but demonstrates the structure and key screens of the proposed app.
+This project now includes a minimal Angular workspace so you can run the app with the Angular CLI while still demonstrating the key screens of the proposed app.
 
 ## Development
 
-This prototype relies on web components and minimal tooling.
+This prototype relies on Ionic web components and the Angular CLI for development.
 
 ```bash
-npm start     # placeholder start script
+npm start     # runs `ng serve`
 npm test      # placeholder test script
 ```
 
@@ -36,14 +36,11 @@ This repository contains the frontend portion of the **Sermon Companion** applic
 
 ## Development
 
-The project is in early stages and does not ship with the full Angular build
-tooling. To experiment with the prototype:
+The project is in early stages. To run the frontend locally:
 
 1. Ensure you have Node.js (v18+) installed.
-2. Clone the repository (installing dependencies is optional since no build
-   step is provided).
-3. Open `index.html` in a browser or integrate the sources into an Angular
-   workspace if you wish to use `ionic serve`.
+2. Clone the repository and run `npm install`.
+3. Execute `npm start` to serve the application with the Angular CLI.
 4. Refer to **TODO.md** for upcoming tasks aimed at making the app production ready.
 
 

@@ -1,0 +1,48 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "defaultProject": "sermon-companion",
+  "projects": {
+    "sermon-companion": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/sermon-companion",
+            "index": "index.html",
+            "main": "main.ts",
+            "tsConfig": "tsconfig.json",
+            "assets": [],
+            "styles": [],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "environments/environment.ts",
+                  "with": "environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "sermon-companion:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sermon-companion:build:production"
+            }
+          }
+        }
+      }
+    }
+  }
+}
