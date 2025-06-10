@@ -43,3 +43,60 @@ The project is in early stages. To get started:
 3. Use `ionic serve` during development.
 4. Refer to **TODO.md** for upcoming tasks aimed at making the app production ready.
 
+
+## Project Structure
+
+```
+├── core/                      # App-wide singleton services and utilities
+│   ├── services/
+│   │   ├── auth.service.ts
+│   │   ├── sermon-ai.service.ts
+│   │   ├── scripture.service.ts
+│   │   ├── storage.service.ts
+│   │   └── voice.service.ts
+│   ├── guards/
+│   │   └── auth.guard.ts
+│   └── interceptors/
+│       └── http.interceptor.ts
+
+├── shared/                    # Shared UI components, pipes, and directives
+│   ├── components/
+│   │   ├── sermon-card/
+│   │   └── editor-toolbar/
+│   ├── pipes/
+│   │   └── scripture-highlight.pipe.ts
+│   └── directives/
+│       └── autofocus.directive.ts
+
+├── features/                  # App features grouped by domain
+│   ├── home/
+│   │   └── home.page.ts
+│   ├── auth/
+│   │   ├── login.page.ts
+│   │   ├── register.page.ts
+│   │   └── profile.page.ts
+│   ├── sermon/
+│   │   ├── create/
+│   │   │   └── create-sermon.page.ts
+│   │   ├── editor/
+│   │   │   └── sermon-editor.page.ts
+│   │   ├── list/
+│   │   │   └── sermon-list.page.ts
+│   │   └── detail/
+│   │       └── sermon-detail.page.ts
+│   ├── community/
+│   │   ├── community-feed.page.ts
+│   │   └── sermon-share.page.ts
+│   └── reflection/
+│       ├── prayer.page.ts
+│       └── reflection.page.ts
+
+├── assets/
+│   └── i18n/
+├── environments/
+│   ├── environment.ts
+│   └── environment.prod.ts
+├── app.config.ts
+├── app.routes.ts
+└── main.ts
+```

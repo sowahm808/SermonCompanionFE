@@ -19,4 +19,4 @@ export class CommunityPage extends HTMLElement {
   }
 }
 
-customElements.define('community-page', CommunityPage);
+customElements.define('community-feed', CommunityPage);
