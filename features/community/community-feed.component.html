@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="back.emit()">Back</ion-button>
+    </ion-buttons>
+    <ion-title>Community</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button expand="full" (click)="share()">Share Last Sermon</ion-button>
+  <ion-list>
+    <ion-item *ngFor="let s of sermons">{{ s.title }}</ion-item>
+    <ion-item *ngIf="!sermons.length">No shared sermons yet</ion-item>
+  </ion-list>
+</ion-content>
