@@ -20,9 +20,13 @@ export class HomePage extends HTMLElement {
           <ion-button expand="full" type="submit">Generate</ion-button>
         </form>
         <div id="result"></div>
+        <ion-button expand="full" id="community">Community</ion-button>
       </ion-content>
     `;
     this.querySelector('form')?.addEventListener('submit', this.onSubmit.bind(this));
+    this.querySelector('#community')?.addEventListener('click', () => {
+      this.dispatchEvent(new Event('open-community'));
+    });
   }
 
   async onSubmit(e: Event) {
@@ -36,6 +40,9 @@ export class HomePage extends HTMLElement {
     });
     const result = await response.json();
     (this.querySelector('#result') as HTMLElement).innerText = result.outline || 'Error generating outline';
+    if (result.outline) {
+      this.dispatchEvent(new CustomEvent('generated', { detail: result.outline }));
+    }
   }
 }
 

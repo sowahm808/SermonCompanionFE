@@ -4,7 +4,7 @@ export class EditorPage extends HTMLElement {
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
-            <ion-back-button default-href="/"></ion-back-button>
+            <ion-button id="back">Back</ion-button>
           </ion-buttons>
           <ion-title>Edit Sermon</ion-title>
         </ion-toolbar>
@@ -17,6 +17,9 @@ export class EditorPage extends HTMLElement {
     this.querySelector('#save')?.addEventListener('click', () => {
       const text = (this.querySelector('#editor') as HTMLTextAreaElement).value;
       this.dispatchEvent(new CustomEvent('save', { detail: text }));
+    });
+    this.querySelector('#back')?.addEventListener('click', () => {
+      this.dispatchEvent(new Event('back'));
     });
   }
 }
