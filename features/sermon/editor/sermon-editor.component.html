@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="back.emit()">Back</ion-button>
+    </ion-buttons>
+    <ion-title>Edit Sermon</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-textarea [(ngModel)]="content" class="editor-area"></ion-textarea>
+  <ion-button expand="full" (click)="save.emit(content)">Save</ion-button>
+</ion-content>

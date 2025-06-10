@@ -6,20 +6,8 @@ import { IonicModule } from '@ionic/angular';
   selector: 'app-sermon-editor',
   standalone: true,
   imports: [IonicModule, FormsModule],
-  template: `
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-button (click)="back.emit()">Back</ion-button>
-        </ion-buttons>
-        <ion-title>Edit Sermon</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-textarea [(ngModel)]="content" style="height: 60vh"></ion-textarea>
-      <ion-button expand="full" (click)="save.emit(content)">Save</ion-button>
-    </ion-content>
-  `
+  templateUrl: './sermon-editor.component.html',
+  styleUrls: ['./sermon-editor.component.css']
 })
 export class SermonEditorComponent {
   @Input() content = '';

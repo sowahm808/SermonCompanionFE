@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create Sermon</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form (ngSubmit)="generate()" #form="ngForm">
+    <ion-item>
+      <ion-label position="stacked">Theme or Scripture</ion-label>
+      <ion-input name="theme" required [(ngModel)]="theme"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Length (minutes)</ion-label>
+      <ion-input type="number" name="length" required min="1" [(ngModel)]="length"></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit" [disabled]="form.invalid">Generate</ion-button>
+  </form>
+
+  <app-sermon-editor *ngIf="generated" [content]="generated" (save)="save($event)" (back)="cancel()"></app-sermon-editor>
+</ion-content>
