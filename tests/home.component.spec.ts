@@ -1,5 +1,5 @@
-import { HomeComponent } from '../features/home/home.component';
-import { SermonAIService } from '../core/services/sermon-ai.service';
+import { HomeComponent } from '../src/app/features/home/home.component';
+import { SermonAIService } from '../src/app/core/services/sermon-ai.service';
 
 // Unit tests for HomeComponent
 

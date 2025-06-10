@@ -1,6 +1,6 @@
-import { SermonListPage } from '../features/sermon/list/sermon-list.page';
-import { StorageService } from '../core/services/storage.service';
-import { Sermon } from '../features/sermon/create/create-sermon.page';
+import { SermonListPage } from '../src/app/features/sermon/list/sermon-list.page';
+import { StorageService } from '../src/app/core/services/storage.service';
+import { Sermon } from '../src/app/features/sermon/create/create-sermon.page';
 
 describe('SermonListPage', () => {
   let storage: jest.Mocked<StorageService>;

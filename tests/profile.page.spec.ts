@@ -1,5 +1,5 @@
-import { ProfilePage } from '../features/auth/profile.page';
-import { AuthService } from '../core/services/auth.service';
+import { ProfilePage } from '../src/app/features/auth/profile.page';
+import { AuthService } from '../src/app/core/services/auth.service';
 
 describe('ProfilePage', () => {
   let auth: jest.Mocked<AuthService>;

@@ -1,5 +1,5 @@
-import { CommunityFeedComponent } from '../features/community/community-feed.component';
-import { StorageService } from '../core/services/storage.service';
+import { CommunityFeedComponent } from '../src/app/features/community/community-feed.component';
+import { StorageService } from '../src/app/core/services/storage.service';
 
 describe('CommunityFeedComponent', () => {
   let storage: jest.Mocked<StorageService>;
