@@ -4,7 +4,7 @@ export class CommunityPage extends HTMLElement {
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
-            <ion-back-button default-href="/"></ion-back-button>
+            <ion-button id="back">Back</ion-button>
           </ion-buttons>
           <ion-title>Community</ion-title>
         </ion-toolbar>
@@ -13,6 +13,9 @@ export class CommunityPage extends HTMLElement {
         <p>Shared sermons will appear here.</p>
       </ion-content>
     `;
+    this.querySelector('#back')?.addEventListener('click', () => {
+      this.dispatchEvent(new Event('back'));
+    });
   }
 }
 
