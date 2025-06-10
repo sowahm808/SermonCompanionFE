@@ -24,4 +24,4 @@ export class EditorPage extends HTMLElement {
   }
 }
 
-customElements.define('editor-page', EditorPage);
+customElements.define('sermon-editor', EditorPage);

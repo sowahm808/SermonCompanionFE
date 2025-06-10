@@ -28,7 +28,7 @@ export class AppComponent extends HTMLElement {
   }
 
   private loadEditor(content: string) {
-    const editor = document.createElement('editor-page') as any;
+    const editor = document.createElement('sermon-editor') as any;
     (editor as any).content = content;
     editor.addEventListener('save', (e: Event) => {
       const text = (e as CustomEvent<string>).detail;
@@ -44,7 +44,7 @@ export class AppComponent extends HTMLElement {
   }
 
   private loadCommunity() {
-    const community = document.createElement('community-page');
+    const community = document.createElement('community-feed');
     community.addEventListener('back', () => this.loadHome());
     this.container.innerHTML = '';
     this.container.appendChild(community);

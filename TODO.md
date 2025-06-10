@@ -2,7 +2,7 @@
 
 The following tasks are planned to bring the Sermon Companion app to a production-ready state.
 
-- [ ] Initialize the Ionic/Angular project structure
+- [x] Initialize the Ionic/Angular project structure
 - [ ] Implement Firebase authentication (Google/Facebook OAuth)
 - [ ] Connect to the OpenAI API for sermon generation
 - [ ] Integrate scripture retrieval from YouVersion or BibleGateway APIs
