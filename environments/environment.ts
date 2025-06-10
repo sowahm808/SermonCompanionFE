@@ -1,3 +1,5 @@
 export const environment = {
-  production: false
+  production: false,
+  /** Base URL for backend API calls. */
+  apiUrl: ''
 };
